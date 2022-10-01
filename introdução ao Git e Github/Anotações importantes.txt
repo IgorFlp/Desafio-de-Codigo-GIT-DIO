@@ -1,0 +1,35 @@
+Estruturas basicas do GIT
+
+Blobs
+Trees 
+Commits
+
+Blob:Encapsula um arquivo, tras apenas conteudo e SHA1 do arquivo, sem o nome do mesmo, contem SHA1 próprio.
+
+Tree:Arvore que contem o Blob, trás o conteudo, SHA1 e nome do arquivo dentro da blob, trás informações da Blob, e contem SHA1 próprio.
+
+Commit:Registra e permite a alteração dos arquivos pra o versionamento, registra nome, email e mensagem do autor da alteração, contem as informações: da Tree, do autor, a mensagem, o parente(commit anterior), tem SHA1 próprio.
+
+
+Git estágios
+			     Remote repository	
+
+		     		    ^
+Working space > Stage Area > Local repository
+				
+
+Após alterar o arquivo, sequencia de comandos
+
+Git add:Passa de Working pra Stage,assumindo as alterações prontas pra commit ( * para todos do diretorio, nome para especifico)
+
+Git commit:Firma a alteração passando do Stage para o local repository, gravando um commit.
+
+Git push:Empurra o commit do repositorio local para o repositorio remoto (Github).
+
+
+Em caso de conflitos entre o codigo local e o codigo do github, por exemplo duas pessoas trabalhando no mesmo codigo e digitando na mesma linha, o git informara o erro.
+
+usamos git pull, para receber o arquivo e corrigir manualmente, e depois damos push.
+
+
+
